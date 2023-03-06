@@ -1,11 +1,11 @@
 from dominate.tags import *
 from dominate.util import raw
-from .templates.audios import audio_table
+from templates.audios import audio_table
 
 
 
 def editing():
-    audio_root = "/diffvoice-web/samples/editing/"
+    audio_root = "/bedit_web/samples/editing/"
     p(
         """In this section, we demonstrate DiffVoice's ability to conduct text-based speech editing (including insertion, replacement, and inpainting) with state-of-the-art quality.""",
         cls="lead"

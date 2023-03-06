@@ -3,7 +3,7 @@ HTML generator for Section: Abstract.
 """
 
 from dominate.tags import *
-from .templates.audios import audio_table, audio_grid
+from templates.audios import audio_table, audio_grid
 from dominate.util import raw
 
 

@@ -3,8 +3,8 @@ HTML generator for Section: Comparison with GuidedTTS 2.
 """
 
 from dominate.tags import *
-from .templates.audios import audio_table
-from .templates.spinspy import nav_spin
+from templates.audios import audio_table
+from templates.spinspy import nav_spin
 
 
 def section_guidedtts2_compare():
@@ -26,7 +26,7 @@ def section_guidedtts2_compare():
         return audio_table(
             text=text,
             audio_files=[
-                f"/diffvoice-web/samples/compare_guidedtts2/{short}_{sys}.wav" for sys in (
+                f"/bedit_web/samples/compare_guidedtts2/{short}_{sys}.wav" for sys in (
                     "ref", "diffvoice", "guidedtts2_zeroshot", "guidedtts2_finetune",
                 )
             ],
