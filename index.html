@@ -1,349 +1,332 @@
-
-<head>
+<!DOCTYPE html>
+<html>
+  <head>
     <meta charset="utf-8">
-    <title>Audio Samples</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-</head>
-
-<!--<link href="./audio/dist/css/bootstrap.min.css" rel="stylesheet">-->
-<body>
-  <div class="container">
-    <div class="jumbotron mt-3">
-      <h2>VQTTS: High-Fidelity Text-to-Speech Synthesis with Self-Supervised VQ Acoustic Feature</h2>
-      <p class="lead">Chenpeng Du, Yiwei Guo, Xie Chen, Kai Yu</p>
-<!--      <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">View navbar docs »</a>-->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>BEdit-TTS Online Supplement</title>
+    <link href="/bedit_web/statics/bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="border border-2 bg-light p-5 rounded mt-3 border-dark">
+          <h2 style="text-align: center">BEdit-TTS: Text-Based Speech Editing System with Bidirectional Transformers<br>
+            <small>Online Supplement</small>
+          </h2><br>
+        </div>
+        <div class="border border-2 bg-light p-5 rounded mt-3 border-danger">
+          <p class="lead">If you are having problems with the audios playing, you can download all audio files on this page by downlading this 
+            <a href="https://anonymous.4open.science/r/bedit_web-9718">github repository</a>. <br><br>Some of the page's functionality requires javascript. Try to open with a different up-to-date browser. 
+          </p>
+        </div>
+        <div class="border border-2 bg-light p-5 rounded mt-3 border-dark">
+          <h3>Abstract</h3>
+          <p class="lead">
+        In this work, we present DiffVoice, a novel text to speech model based on latent diffusion. We propose to first encode speech signals into a phoneme rate latent representation with a variational autoencoder enhanced by adversarial training, and then jointly model the duration and the latent representation with a diffusion model. Subjective evaluations demonstrate that our method beats the best publicly available systems in naturalness. By adopting recent generative inverse problem solving algorithms for diffusion models, DiffVoice achieves the state of the art performance in text based speech editing, and zero shot adaptation.
+        <br><br>The following are 6 different renditions of the abstract by a DiffVoice model. Note that this model does not have any speaker input.It samples <b>DIFF</b>erent <b>VOICE</b>s from the latent space.</p>
+          <div class="d-flex flex-row mb-3 flex-wrap justify-content-around">
+            <div class="p-2">
+              <audio controls="" preload="none" style="width: 300px">
+                <source src="/diffvoice-web/samples/abstract/f_0.wav" type="audio/wav">
+              </audio>
+            </div>
+            <div class="p-2">
+              <audio controls="" preload="none" style="width: 300px">
+                <source src="/diffvoice-web/samples/abstract/f_1.wav" type="audio/wav">
+              </audio>
+            </div>
+            <div class="p-2">
+              <audio controls="" preload="none" style="width: 300px">
+                <source src="/diffvoice-web/samples/abstract/f_2.wav" type="audio/wav">
+              </audio>
+            </div>
+            <div class="p-2">
+              <audio controls="" preload="none" style="width: 300px">
+                <source src="/diffvoice-web/samples/abstract/m_0.wav" type="audio/wav">
+              </audio>
+            </div>
+            <div class="p-2">
+              <audio controls="" preload="none" style="width: 300px">
+                <source src="/diffvoice-web/samples/abstract/m_1.wav" type="audio/wav">
+              </audio>
+            </div>
+            <div class="p-2">
+              <audio controls="" preload="none" style="width: 300px">
+                <source src="/diffvoice-web/samples/abstract/m_2.wav" type="audio/wav">
+              </audio>
+            </div>
+          </div>
+        </div>
+        <div class="border border-2 bg-light p-5 rounded mt-3 border-dark">
+          <h3>Speech Editing</h3>
+          <p class="lead">In this section, we demonstrate DiffVoice's ability to conduct text-based speech editing (including insertion, replacement, and inpainting) with state-of-the-art quality.</p>
+          <p class="lead">The following audio samples are obtained from 
+            <a href="https://ydcustc.github.io/retrieverTTS-demo/">RetrieverTTS</a> website. We specially thank the authors of RetrieverTTS for providing their generated samples for evaluation.
+          </p>
+          <p class="lead">(<strong>Speech Inpainting</strong>) Ruth was glad to hear <u><em><strong>that Philip had made a push into</strong></em></u> the world, and she was sure that his talent and courage would make a way for him. She should pray for his success at any rate, and especially that the Indians, in St. Louis, would not take his scalp.</p>
+          <div class="table-responsive">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Original</strong>
+                  </td>
+                  <td>
+                    <strong>DiffVoice</strong>
+                  </td>
+                  <td>
+                    <strong>RetrieverTTS</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/6.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/6_diffvoice.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/6_retriever.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="lead">(<strong>Speech Insertion</strong>) Is the under side of civilization any less important than the upper side <u><em><strong>of the very same civilization</strong></em></u> merely because it is deeper and more sombre?</p>
+          <div class="table-responsive">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Original</strong>
+                  </td>
+                  <td>
+                    <strong>DiffVoice</strong>
+                  </td>
+                  <td>
+                    <strong>RetrieverTTS</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/0.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/0_diffvoice.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/0_retriever.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="lead">(<strong>Speech Insertion</strong>) They are chiefly formed from combinations <u><em><strong>under his success</strong></em></u> of the impressions made in childhood.</p>
+          <div class="table-responsive">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Original</strong>
+                  </td>
+                  <td>
+                    <strong>DiffVoice</strong>
+                  </td>
+                  <td>
+                    <strong>RetrieverTTS</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/1.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/1_diffvoice.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/1_retriever.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="lead">The following samples are taken from the website of 
+            <a href="https://daxintan-cuhk.github.io/EditSpeech/">EditSpeech</a>. To which we have no access of the implementation. EditSpeech is trained on VCTK, instead of LibriTTS.
+          </p>
+          <p class="lead">(<strong>Speech Insertion</strong>) some have accepted it as a miracle <u><em><strong>never seen before</strong></em></u> without physical explanation</p>
+          <div class="table-responsive">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Original</strong>
+                  </td>
+                  <td>
+                    <strong>DiffVoice</strong>
+                  </td>
+                  <td>
+                    <strong>EditSpeech</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/3.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/3_diffvoice.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/3_editspeech.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="lead">(<strong>Speech Replacement</strong>) some have accepted it as <u><em><strong><del>a miracle</del> an undeniable fact</strong></em></u> without physical explanation</p>
+          <div class="table-responsive">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Original</strong>
+                  </td>
+                  <td>
+                    <strong>DiffVoice</strong>
+                  </td>
+                  <td>
+                    <strong>EditSpeech</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/3.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/4_diffvoice.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/4_editspeech.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="lead">(<strong>Speech Insertion</strong>) for that <u><em><strong>theoretical and realistic</strong></em></u> reason cover should not be given</p>
+          <div class="table-responsive">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Original</strong>
+                  </td>
+                  <td>
+                    <strong>DiffVoice</strong>
+                  </td>
+                  <td>
+                    <strong>EditSpeech</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/2.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/2_diffvoice.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/2_editspeech.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="lead">(<strong>Speech Replacement</strong>) you should always be able to <u><em><strong><del>get out in</del> focus your research on</strong></em></u> some direction</p>
+          <div class="table-responsive">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Original</strong>
+                  </td>
+                  <td>
+                    <strong>DiffVoice</strong>
+                  </td>
+                  <td>
+                    <strong>EditSpeech</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/5.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/5_diffvoice.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="" preload="none" style="width: 250px">
+                      <source src="/bedit_web/samples/editing/5_editspeech.wav" type="audio/wav">
+                    </audio>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
-	
-	<p>This page is the demo of audio samples for our <a href="https://arxiv.org/abs/2204.00768">paper</a>. Note that we downsample the LJSpeech to 16k in this work for simplicity.</p>
-    
-	<h3>Part I: Speech Reconstruction</h3>
-		<table class="table">
-		<tr><td scope="col" colspan="4"></th></tr>
-		<tr>
-			<td align="center">Recording</td>
-			<td><audio src="./audio/gt/LJ050-0136.wav" controls=""></audio></td>
-			<td align="center">GT Mel + HifiGAN</td>
-			<td><audio src="./audio/hifigan/LJ050-0136.wav" controls=""></audio></td>
-		</tr>
-		<tr>
-			<td align="center">GT VQ&pros + HifiGAN</td>
-			<td><audio src="./audio/vqw2v_hifigan/LJ050-0136.wav" controls=""></audio></td>
-			<td align="center">GT VQ&pros + vec2wav</td>
-			<td><audio src="./audio/vqw2v_v2w_hifigan/LJ050-0136.wav" controls=""></audio></td>
-		</tr>
-		
-		<tr><td scope="col" colspan="4"></th></tr>
-		<tr>
-			<td align="center">Recording</td>
-			<td><audio src="./audio/gt/LJ050-0143.wav" controls=""></audio></td>
-			<td align="center">GT Mel + HifiGAN</td>
-			<td><audio src="./audio/hifigan/LJ050-0143.wav" controls=""></audio></td>
-		</tr>
-		<tr>
-			<td align="center">GT VQ&pros + HifiGAN</td>
-			<td><audio src="./audio/vqw2v_hifigan/LJ050-0143.wav" controls=""></audio></td>
-			<td align="center">GT VQ&pros + vec2wav</td>
-			<td><audio src="./audio/vqw2v_v2w_hifigan/LJ050-0143.wav" controls=""></audio></td>
-		</tr>
-		
-		<tr><td scope="col" colspan="4"></th></tr>
-		<tr>
-			<td align="center">Recording</td>
-			<td><audio src="./audio/gt/LJ050-0144.wav" controls=""></audio></td>
-			<td align="center">GT Mel + HifiGAN</td>
-			<td><audio src="./audio/hifigan/LJ050-0144.wav" controls=""></audio></td>
-		</tr>
-		<tr>
-			<td align="center">GT VQ&pros + HifiGAN</td>
-			<td><audio src="./audio/vqw2v_hifigan/LJ050-0144.wav" controls=""></audio></td>
-			<td align="center">GT VQ&pros + vec2wav</td>
-			<td><audio src="./audio/vqw2v_v2w_hifigan/LJ050-0144.wav" controls=""></audio></td>
-		</tr>
-		
-		<tr><td scope="col" colspan="4"></th></tr>
-		<tr>
-			<td align="center">Recording</td>
-			<td><audio src="./audio/gt/LJ050-0147.wav" controls=""></audio></td>
-			<td align="center">GT Mel + HifiGAN</td>
-			<td><audio src="./audio/hifigan/LJ050-0147.wav" controls=""></audio></td>
-		</tr>
-		<tr>
-			<td align="center">GT VQ&pros + HifiGAN</td>
-			<td><audio src="./audio/vqw2v_hifigan/LJ050-0147.wav" controls=""></audio></td>
-			<td align="center">GT VQ&pros + vec2wav</td>
-			<td><audio src="./audio/vqw2v_v2w_hifigan/LJ050-0147.wav" controls=""></audio></td>
-		</tr>
-		
-		<tr><td scope="col" colspan="4"></th></tr>
-		<tr>
-			<td align="center">Recording</td>
-			<td><audio src="./audio/gt/LJ050-0224.wav" controls=""></audio></td>
-			<td align="center">GT Mel + HifiGAN</td>
-			<td><audio src="./audio/hifigan/LJ050-0224.wav" controls=""></audio></td>
-		</tr>
-		<tr>
-			<td align="center">GT VQ&pros + HifiGAN</td>
-			<td><audio src="./audio/vqw2v_hifigan/LJ050-0224.wav" controls=""></audio></td>
-			<td align="center">GT VQ&pros + vec2wav</td>
-			<td><audio src="./audio/vqw2v_v2w_hifigan/LJ050-0224.wav" controls=""></audio></td>
-		</tr>
-		
-
-	</table>
-	
-	<h3>Part II: Text-to-speech Synthesis</h3>
-	<table class="table">
-			<tr><td scope="col" colspan="3">with the particular purposes of the agency involved. the commission recognizes that this is a controversial area</th></tr>
-			<tr>
-				<td align="center">Recording</td>
-				<td align="center">Tacotron 2</td>
-				<td align="center">FastSpeech 2</td>
-			</tr>
-			<tr>
-				<td><audio src="./audio/gt/LJ050-0168.wav" controls=""></audio></td>
-				<td><audio src="./audio/tacotron/LJ050-0168.wav" controls=""></audio></td>
-				<td><audio src="./audio/fs2/LJ050-0168.wav" controls=""></audio></td>
-			</tr>
-			<tr>
-				<td align="center">GlowTTS</td>
-				<td align="center">VITS</td>
-				<td align="center">VQTTS</td>
-			</tr>
-			<tr>
-				<td><audio src="./audio/glowtts/LJ050-0168.wav" controls=""></audio></td>
-				<td><audio src="./audio/vits/LJ050-0168.wav" controls=""></audio></td>
-				<td><audio src="./audio/t2v/LJ050-0168.wav" controls=""></audio></td>
-			</tr>
-			
-			
-			<tr><td scope="col" colspan="3">this matter is obviously beyond the jurisdiction of the commission,</th></tr>
-			
-			<tr>
-				<td align="center">Recording</td>
-				<td align="center">Tacotron 2</td>
-				<td align="center">FastSpeech 2</td>
-			</tr>
-			<tr>
-				<td><audio src="./audio/gt/LJ050-0170.wav" controls=""></audio></td>
-				<td><audio src="./audio/tacotron/LJ050-0170.wav" controls=""></audio></td>
-				<td><audio src="./audio/fs2/LJ050-0170.wav" controls=""></audio></td>
-			</tr>
-			<tr>
-				<td align="center">GlowTTS</td>
-				<td align="center">VITS</td>
-				<td align="center">VQTTS</td>
-			</tr>
-			<tr>
-				<td><audio src="./audio/glowtts/LJ050-0170.wav" controls=""></audio></td>
-				<td><audio src="./audio/vits/LJ050-0170.wav" controls=""></audio></td>
-				<td><audio src="./audio/t2v/LJ050-0170.wav" controls=""></audio></td>
-			</tr>
-			
-			<tr><td scope="col" colspan="3">the commission regards this as a most useful innovation and urges that the practice be continued.</th></tr>
-			
-			<tr>
-				<td align="center">Recording</td>
-				<td align="center">Tacotron 2</td>
-				<td align="center">FastSpeech 2</td>
-			</tr>
-			<tr>
-				<td><audio src="./audio/gt/LJ050-0181.wav" controls=""></audio></td>
-				<td><audio src="./audio/tacotron/LJ050-0181.wav" controls=""></audio></td>
-				<td><audio src="./audio/fs2/LJ050-0181.wav" controls=""></audio></td>
-			</tr>
-			<tr>
-				<td align="center">GlowTTS</td>
-				<td align="center">VITS</td>
-				<td align="center">VQTTS</td>
-			</tr>
-			<tr>
-				<td><audio src="./audio/glowtts/LJ050-0181.wav" controls=""></audio></td>
-				<td><audio src="./audio/vits/LJ050-0181.wav" controls=""></audio></td>
-				<td><audio src="./audio/t2v/LJ050-0181.wav" controls=""></audio></td>
-			</tr>
-			
-			<!-- 
-			<tr><td scope="col" colspan="3">the secret service has now presented its recommendations to the bureau of the budget. the plan proposed by the service</th></tr>
-
-			<tr>
-				<td align="center">Recording</td>
-				<td align="center">Tacotron 2</td>
-				<td align="center">FastSpeech 2</td>
-			</tr>
-			<tr>
-				<td><audio src="./audio/gt/LJ050-0221.wav" controls=""></audio></td>
-				<td><audio src="./audio/tacotron/LJ050-0221.wav" controls=""></audio></td>
-				<td><audio src="./audio/fs2/LJ050-0221.wav" controls=""></audio></td>
-			</tr>
-			<tr>
-				<td align="center">GlowTTS</td>
-				<td align="center">VITS</td>
-				<td align="center">VQTTS</td>
-			</tr>
-			<tr>
-				<td><audio src="./audio/glowtts/LJ050-0221.wav" controls=""></audio></td>
-				<td><audio src="./audio/vits/LJ050-0221.wav" controls=""></audio></td>
-				<td><audio src="./audio/t2v/LJ050-0221.wav" controls=""></audio></td>
-			</tr>	
- -->
-
-			
-			<tr><td scope="col" colspan="3">this no longer appears to be the case.</th></tr>
-			<tr>
-				<td align="center">Recording</td>
-				<td align="center">Tacotron 2</td>
-				<td align="center">FastSpeech 2</td>
-			</tr>
-			<tr>
-				<td><audio src="./audio/gt/LJ050-0255.wav" controls=""></audio></td>
-				<td><audio src="./audio/tacotron/LJ050-0255.wav" controls=""></audio></td>
-				<td><audio src="./audio/fs2/LJ050-0255.wav" controls=""></audio></td>
-			</tr>
-			<tr>
-				<td align="center">GlowTTS</td>
-				<td align="center">VITS</td>
-				<td align="center">VQTTS</td>
-			</tr>
-			<tr>
-				<td><audio src="./audio/glowtts/LJ050-0255.wav" controls=""></audio></td>
-				<td><audio src="./audio/vits/LJ050-0255.wav" controls=""></audio></td>
-				<td><audio src="./audio/t2v/LJ050-0255.wav" controls=""></audio></td>
-			</tr>
-			
-			
-			
-			<tr><td scope="col" colspan="3">the secret service has been receiving full cooperation in scientific research and technological development</th></tr>
-			<tr>
-				<td align="center">Recording</td>
-				<td align="center">Tacotron 2</td>
-				<td align="center">FastSpeech 2</td>
-			</tr>
-			<tr>
-				<td><audio src="./audio/gt/LJ050-0260.wav" controls=""></audio></td>
-				<td><audio src="./audio/tacotron/LJ050-0260.wav" controls=""></audio></td>
-				<td><audio src="./audio/fs2/LJ050-0260.wav" controls=""></audio></td>
-			</tr>
-			<tr>
-				<td align="center">GlowTTS</td>
-				<td align="center">VITS</td>
-				<td align="center">VQTTS</td>
-			</tr>
-			<tr>
-				<td><audio src="./audio/glowtts/LJ050-0260.wav" controls=""></audio></td>
-				<td><audio src="./audio/vits/LJ050-0260.wav" controls=""></audio></td>
-				<td><audio src="./audio/t2v/LJ050-0260.wav" controls=""></audio></td>
-			</tr>
-			
-			
-			
-			
-			<tr><td scope="col" colspan="3">even if the manpower and technological resources of the secret service are adequately augmented,</th></tr>
-			<tr>
-				<td align="center">Recording</td>
-				<td align="center">Tacotron 2</td>
-				<td align="center">FastSpeech 2</td>
-			</tr>
-			<tr>
-				<td><audio src="./audio/gt/LJ050-0262.wav" controls=""></audio></td>
-				<td><audio src="./audio/tacotron/LJ050-0262.wav" controls=""></audio></td>
-				<td><audio src="./audio/fs2/LJ050-0262.wav" controls=""></audio></td>
-			</tr>
-			<tr>
-				<td align="center">GlowTTS</td>
-				<td align="center">VITS</td>
-				<td align="center">VQTTS</td>
-			</tr>
-			<tr>
-				<td><audio src="./audio/glowtts/LJ050-0262.wav" controls=""></audio></td>
-				<td><audio src="./audio/vits/LJ050-0262.wav" controls=""></audio></td>
-				<td><audio src="./audio/t2v/LJ050-0262.wav" controls=""></audio></td>
-			</tr>
-			
-			
-			
-			
-			<tr><td scope="col" colspan="3">the commission recommends that the present arrangements</th></tr>
-			<tr>
-				<td align="center">Recording</td>
-				<td align="center">Tacotron 2</td>
-				<td align="center">FastSpeech 2</td>
-			</tr>
-			<tr>
-				<td><audio src="./audio/gt/LJ050-0264.wav" controls=""></audio></td>
-				<td><audio src="./audio/tacotron/LJ050-0264.wav" controls=""></audio></td>
-				<td><audio src="./audio/fs2/LJ050-0264.wav" controls=""></audio></td>
-			</tr>
-			<tr>
-				<td align="center">GlowTTS</td>
-				<td align="center">VITS</td>
-				<td align="center">VQTTS</td>
-			</tr>
-			<tr>
-				<td><audio src="./audio/glowtts/LJ050-0264.wav" controls=""></audio></td>
-				<td><audio src="./audio/vits/LJ050-0264.wav" controls=""></audio></td>
-				<td><audio src="./audio/t2v/LJ050-0264.wav" controls=""></audio></td>
-			</tr>
-	</table>
-
-    <h3>Part III: Prosody diversity in PL prosody hypotheses</h3>
-	<table class="table">
-		<tr><td scope="col" colspan="3">county, and state law enforcement agencies in their districts.</th></tr>
-		<tr>
-			<td align="center">Prosody 1</td>
-			<td align="center">Prosody 2</td>
-			<td align="center">Prosody 3</td>
-		</tr>
-		<tr>
-			<td><audio src="./audio/t2v_diversity/LJ050-0143_0.wav" controls=""></audio></td>
-			<td><audio src="./audio/t2v_diversity/LJ050-0143_4.wav" controls=""></audio></td>
-			<td><audio src="./audio/t2v_diversity/LJ050-0143_2.wav" controls=""></audio></td>
-		</tr>
-		
-		<tr><td scope="col" colspan="3">secret service personnel and facilities</th></tr>
-		<tr>
-			<td align="center">Prosody 1</td>
-			<td align="center">Prosody 2</td>
-			<td align="center">Prosody 3</td>
-		</tr>
-		<tr>
-			<td><audio src="./audio/t2v_diversity/LJ050-0204_0.wav" controls=""></audio></td>
-			<td><audio src="./audio/t2v_diversity/LJ050-0204_4.wav" controls=""></audio></td>
-			<td><audio src="./audio/t2v_diversity/LJ050-0204_5.wav" controls=""></audio></td>
-		</tr>
-		
-				
-		<tr><td scope="col" colspan="3">the assistance of trained federal law enforcement officers.</th></tr>
-		<tr>
-			<td align="center">Prosody 1</td>
-			<td align="center">Prosody 2</td>
-			<td align="center">Prosody 3</td>
-		</tr>
-		<tr>
-			<td><audio src="./audio/t2v_diversity/LJ050-0244_0.wav" controls=""></audio></td>
-			<td><audio src="./audio/t2v_diversity/LJ050-0244_5.wav" controls=""></audio></td>
-			<td><audio src="./audio/t2v_diversity/LJ050-0244_3.wav" controls=""></audio></td>
-		</tr>
-	</table>
-  </div>
   
-<!--  <script src="./bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
-</body>
+    <script src="/bedit_web/statics/jquery/jquery-1.12.4.min.js"></script>
+    <script src="/bedit_web/statics/bootstrap-5.2.2-dist/bootstrap.min.js"></script>
+  </body>
+  <script>
+        $(function(){
+            $("audio").on("play", function() {
+                $("audio").not(this).each(function(index, audio) {
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+            });
+        });
+        </script>
+</html>
