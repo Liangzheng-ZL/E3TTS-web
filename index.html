@@ -28,12 +28,10 @@
           <h3>Baseline models</h3>
           <p>
         The implementations of baseline systems are based on the same FastSpeech 2 model.
+        <br><b>Baseline 1</b>: This system generates the complete speech audio from the edited text.<br>
+        <b>Baseline 2</b>: This system generates only the shot speech segment with the input words of the modified region, then inserts the segment into the corresponding position of the original speech. 
         <br>
-        &lt;b&gt;Baseline 1&lt;/b&gt;: This system generates the complete speech audio from the edited text.
-        <br>
-        &lt;b&gt;Baseline 2&lt;/b&gt;: This system generates only the shot speech segment with the input words of the modified region, then inserts the segment into the corresponding position of the original speech. 
-        <br>
-        &lt;b&gt;Baseline 3&lt;/b&gt;: This system also generates a complete speech, but the shot speech segment corresponding to the modified region words is cut from the generation and inserted into the corresponding position of the original speech.
+        <b>Baseline 3</b>: This system also generates a complete speech, but the shot speech segment corresponding to the modified region words is cut from the generation and inserted into the corresponding position of the original speech.
         <br></p>
         </div>
         <div class="border border-2 bg-light p-5 rounded mt-3 border-dark">

@@ -26,17 +26,15 @@ def section_abstract():
         The implementations of baseline systems are based on the same FastSpeech 2 model.
         """,
         br(),
-        """
-        <b>Baseline 1</b>: This system generates the complete speech audio from the edited text.
-        """,
+        raw("""<b>Baseline 1</b>: This system generates the complete speech audio from the edited text."""),
         br(),
-        """
+        raw("""
         <b>Baseline 2</b>: This system generates only the shot speech segment with the input words of the modified region, then inserts the segment into the corresponding position of the original speech. 
-        """,
+        """),
         br(),
-        """
+        raw("""
         <b>Baseline 3</b>: This system also generates a complete speech, but the shot speech segment corresponding to the modified region words is cut from the generation and inserted into the corresponding position of the original speech.
-        """,
+        """),
         br(),
     )
     # audio_grid(
