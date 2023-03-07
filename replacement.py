@@ -7,7 +7,7 @@ from templates.audios import audio_table, my_audio_table
 from templates.spinspy import nav_spin
 
 
-def section_guidedtts2_compare():
+def section_replace_compare():
     h3("Replacement")
     p(
         [

@@ -82,9 +82,9 @@ if __name__ == "__main__":
                 h3("Speech Editing")
                 editing()
                 
-            # with div(cls="border border-2 bg-light p-5 rounded mt-3 border-dark"):
-            #     from guidedtts2 import section_guidedtts2_compare
-            #     section_guidedtts2_compare()
+            with div(cls="border border-2 bg-light p-5 rounded mt-3 border-dark"):
+                from replacement import section_replace_compare
+                section_replace_compare()
         
     with doc.footer:
         script(src="/bedit_web/statics/jquery/jquery-1.12.4.min.js")
