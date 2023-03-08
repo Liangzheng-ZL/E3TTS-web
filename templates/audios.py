@@ -2,6 +2,7 @@ from dominate.tags import *
 from typing import Iterable
 from math import ceil
 from pathlib import Path
+from dominate.util import raw
 
 
 def title_row(titles: Iterable[str]):
@@ -111,7 +112,7 @@ def my_audio_table(
         with _thead:
             _t = _thead.add(tr())
             _t.add(th(
-                e_text,
+                raw(e_text),
                 colspan=f"{width}",
                 style="text-align: left;"
             ))

@@ -38,7 +38,7 @@ def section_replace_compare():
     ),
     p(
         "Edited text: ",
-        raw("""Or whatever was the <u><em><strong>present</strong></em></u> task."""),
+        raw("""Or whatever was the <u><em><strong>current</strong></em></u> task."""),
         cls="lead"
     ),
     _gen_table("short", "eng",  None, None,    
