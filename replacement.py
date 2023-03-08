@@ -31,18 +31,11 @@ def section_replace_compare():
             ],
             width=5, control_width_px=250
         )
-
-    p(
+    blocks.append(_gen_table("short", "eng",
         "Original text: " + """Or whatever was the present task.""",
-        cls="lead"
-    ),
-    p(
-        "Edited text: ",
-        raw("""Or whatever was the <u><em><strong>current</strong></em></u> task."""),
-        cls="lead"
-    ),
-    _gen_table("short", "eng",  None, None,    
-    "92_auntcretesemancipation_01_hill_0039")
+        "Edited text: " + """Or whatever was the <u><em><strong>current</strong></em></u> task.""",
+        "92_auntcretesemancipation_01_hill_0039"
+    ))
 
     blocks.append(_gen_table("short", "eng",
         "Original text: " + """Many others have already gone broke.""",

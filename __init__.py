@@ -77,10 +77,10 @@ if __name__ == "__main__":
             #     )
             #     vctk_table()
 
-            with div(cls="border border-2 bg-light p-5 rounded mt-3 border-dark"):
-                from editing import editing
-                h3("Speech Editing")
-                editing()
+            # with div(cls="border border-2 bg-light p-5 rounded mt-3 border-dark"):
+            #     from editing import editing
+            #     h3("Speech Editing")
+            #     editing()
                 
             with div(cls="border border-2 bg-light p-5 rounded mt-3 border-dark"):
                 from replacement import section_replace_compare
