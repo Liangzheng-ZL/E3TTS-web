@@ -89,6 +89,10 @@ if __name__ == "__main__":
             with div(cls="border border-2 bg-light p-5 rounded mt-3 border-dark"):
                 from insertion import section_insert_compare
                 section_insert_compare()
+
+            with div(cls="border border-2 bg-light p-5 rounded mt-3 border-dark"):
+                from deletion import section_delete_compare
+                section_delete_compare()
         
     with doc.footer:
         script(src="./statics/jquery/jquery-1.12.4.min.js")

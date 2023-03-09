@@ -22,7 +22,7 @@ def section_replace_compare():
             o_text=o_text,
             e_text=e_text,
             audio_files=[
-                f"/bedit_web/samples/replace/{language}/{sys}/{length}/{name}.wav" for sys in (
+                f"/bedit_web/samples/replace/{language}/{length}/{sys}/{name}.wav" for sys in (
                     "gt", "baseline1", "baseline2", "baeline3", "bedit-tts",
                 )
             ],
