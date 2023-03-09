@@ -28,7 +28,7 @@ def section_delete_compare():
             o_text=o_text,
             e_text=e_text,
             audio_files=[
-                f"/bedit_web/samples/delete/{language}/{sys}/{name}.wav" for sys in (
+                f"./samples/delete/{language}/{sys}/{name}.wav" for sys in (
                     "gt", "bedit-1", "bedit-2",
                 )
             ],
