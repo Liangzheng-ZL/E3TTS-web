@@ -29,7 +29,7 @@ def section_delete_compare():
             e_text=e_text,
             audio_files=[
                 f"./samples/delete/{language}/{sys}/{name}.wav" for sys in (
-                    "gt", "bedit-1", "bedit-2",
+                    "gt", "bedit-d1", "bedit-d2",
                 )
             ],
             titles=[
