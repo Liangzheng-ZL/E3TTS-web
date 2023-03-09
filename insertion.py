@@ -23,7 +23,7 @@ def section_insert_compare():
             e_text=e_text,
             audio_files=[
                 f"./samples/insert/{language}/{length}/{sys}/{name}.wav" for sys in (
-                    "gt", "baseline1", "baseline2", "baeline3", "bedit-tts",
+                    "gt", "baseline1", "baseline2", "baseline3", "bedit-tts",
                 )
             ],
             titles=[
