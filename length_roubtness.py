@@ -6,7 +6,14 @@ from templates.spinspy import nav_spin
 
 def section_length_compare():
     h3("Insertion Length Robustness")
-    h4("Middle")
+    p(
+        """In this section, we demonstrate BEdit-TTS's ability to conduct text-based speech editing (insertion) with different lengths of the inserted words.""",
+        cls="lead"
+    )
+    p(
+        raw("""The <b>short</b> insertion samples have been shown in <b> Section Insertion</b>."""),
+        cls="lead"
+    )
     blocks = []
     def _gen_table(length: str, language: str, o_text: str, mide_text: str, longe_text: str, name: str):
         return length_audio_table(
