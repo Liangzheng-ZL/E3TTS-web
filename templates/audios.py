@@ -128,6 +128,65 @@ def my_audio_table(
         # tr(td() for _ in range(width))
     return _table
 
+def length_audio_table(
+    audio_files: Iterable[str], 
+    titles: Iterable[str]=None, 
+    o_text: str=None,
+    mide_text: str=None,
+    longe_text: str=None,
+    width: int=4,
+    control_width_px: int=150
+):
+    # Padding Nones to ensure multiples of width:
+    n_rows = ceil(len(audio_files) / width)
+    n_elems = n_rows * width
+    audio_files += [None] * (n_elems - len(audio_files))
+    if titles is not None:
+        titles += [None] * (n_elems - len(titles))
+
+    # Construct the table:
+    _div = div(cls="table-responsive")
+
+    _table = _div.add(table(_class="table"))
+
+    if o_text is not None:
+        _thead = _table.add(thead())
+        with _thead:
+            _t = _thead.add(tr())
+            _t.add(th(
+                o_text,
+                colspan=f"{width}",
+                style="text-align: left;"
+            ))
+    if mide_text is not None:
+        _thead = _table.add(thead())
+        with _thead:
+            _t = _thead.add(tr())
+            _t.add(th(
+                raw(mide_text),
+                colspan=f"{width}",
+                style="text-align: left;"
+            ))
+    if longe_text is not None:
+        _thead = _table.add(thead())
+        with _thead:
+            _t = _thead.add(tr())
+            _t.add(th(
+                raw(longe_text),
+                colspan=f"{width}",
+                style="text-align: left;"
+            ))
+
+    _tbody = _table.add(tbody())
+    with _tbody:
+        for rid in range(n_rows):
+            a = rid * width
+            b = rid * width + width
+            if titles is not None:
+                title_row(titles[a: b])
+            audio_row(audio_files[a: b], control_width_px=control_width_px)
+        # tr(td() for _ in range(width))
+    return _table
 
 
 def audio_grid(
