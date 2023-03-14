@@ -1,7 +1,3 @@
-"""
-HTML generator for Section: Comparison with GuidedTTS 2.
-"""
-
 from dominate.tags import *
 from dominate.util import raw
 from templates.audios import audio_table, my_audio_table
@@ -9,32 +5,23 @@ from templates.spinspy import nav_spin
 
 
 def section_replace_compare():
-    h3("Replacement")
-    p(
-        [
-            """Each sample has 4 audios, of which are synthesized audios from baseline and proposed systems. """,
-        ], _class="lead"
-    )
+    h3("Insertion Length Robustness")
+    h4("Middle")
     blocks = []
     def _gen_table(length: str, language: str, o_text: str, e_text: str, name: str):
         return my_audio_table(
             o_text=o_text,
             e_text=e_text,
             audio_files=[
-                f"./samples/replace/{language}/{length}/{sys}/{name}.wav" for sys in (
-                    "gt", "baseline1", "baseline2", "baseline3", "bedit-tts",
+                f"./samples/length/{sys}/{name}.wav" for sys in (
+                    "gt", "mid"
                 )
             ],
             titles=[
-                f"Original audio", "Baseline 1", "Baseline 2", "Baseline 3", "BEdit-TTS"
+                f"Original audio", "Middle"
             ],
-            width=5, control_width_px=250
+            width=2, control_width_px=250
         )
-    blocks.append(_gen_table("short", "eng",
-        "Original text: " + """Or whatever was the present task.""",
-        "Edited text: " + """Or whatever was the <u><em><strong>current</strong></em></u> task.""",
-        "92_auntcretesemancipation_01_hill_0039"
-    ))
 
     blocks.append(_gen_table("short", "eng",
         "Original text: " + """Many others have already gone broke.""",
