@@ -59,5 +59,31 @@ def section_replace_compare():
         "Edited text: " + """My old remembrances went from me <u><em><strong>partly</strong></em></u> and all the ways of men so vain and melancholy.""",
         "11697_actressinhighlife_01_bowen_0002"
     ))
+    blocks.append(_gen_table("short", "eng",
+        "Original text: " + """星期六对吧。""",
+        "Edited text: " + """星期<u><em><strong>一和星期二</strong></em></u>对吧。""",
+        "SSB00180405"
+    ))
+    blocks.append(_gen_table("short", "chn",
+        "Original text: " + """珍珠湖。""",
+        "Edited text: " + """<u><em><strong>涵泽</strong></em></u>湖。""",
+        "SSB00330447"
+    ))
+    blocks.append(_gen_table("short", "chn",
+        "Original text: " + """安徽六岁女童被伤案告破女童母亲及同居男子被拘。""",
+        "Edited text: " + """安徽六岁女童被伤案告破<u><em><strong>犯罪嫌疑人</strong></em></u>被拘。""",
+        "SSB00730202"
+    ))
+    blocks.append(_gen_table("short", "chn",
+        "Original text: " + """这标志着网络安全已经上升为国家的重要战略。""",
+        "Edited text: " + """这标志着<u><em><strong>环境保护</strong></em></u>已经上升为国家的重要战略。""",
+        "SSB07860324"
+    ))
+    blocks.append(_gen_table("short", "chn",
+        "Original text: " + """陈晓东也因为女有了女儿变得更加温暖。""",
+        "Edited text: " + """陈晓东也因为<u><em><strong>女儿结婚</strong></em></u>变得更加温暖。""",
+        "SSB19390218"
+    ))
+
 
    
