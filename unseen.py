@@ -4,7 +4,7 @@ from templates.audios import audio_table, my_audio_table
 from templates.spinspy import nav_spin
 
 
-def section_replace_compare():
+def section_unseen_compare():
     h3("Reconstruction")
     p(
         [

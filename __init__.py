@@ -58,6 +58,9 @@ if __name__ == "__main__":
             with div(cls="border border-2 bg-light p-5 rounded mt-3 border-dark"):
                 from length_roubtness import section_length_compare
                 section_length_compare()
+            with div(cls="border border-2 bg-light p-5 rounded mt-3 border-dark"):
+                from unseen import section_unseen_compare
+                section_unseen_compare()
         
     with doc.footer:
         script(src="./statics/jquery/jquery-1.12.4.min.js")
