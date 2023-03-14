@@ -1,7 +1,3 @@
-"""
-HTML generator for Section: Comparison with GuidedTTS 2.
-"""
-
 from dominate.tags import *
 from dominate.util import raw
 from templates.audios import audio_table, my_audio_table

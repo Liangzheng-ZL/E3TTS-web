@@ -1,6 +1,3 @@
-"""
-Online supplement for ICASSP 2023 submission.
-"""
 import inspect
 import os 
 from pathlib import Path
@@ -30,10 +27,6 @@ if __name__ == "__main__":
             with div(cls="border border-2 bg-light p-5 rounded mt-3 border-dark"):
                 header(title="BEdit-TTS: Text-Based Speech Editing System with Bidirectional Transformers", sub="Online Supplement")
                 br()
-                # authors_row(
-                #     ["Zhijun Liu", "Yiwei Guo", "Kai Yu"],
-                #     ["zhijunliu@sjtu.edu.cn", "cantabile_kwok@sjtu.edu.cn", "kai.yu@sjtu.edu.cn"]
-                # )
 
             with div(cls="border border-2 bg-light p-5 rounded mt-3 border-danger"):
                 p(
@@ -50,38 +43,6 @@ if __name__ == "__main__":
                 from abstract import section_abstract
                 section_abstract()
 
-            # with div(cls="border border-2 bg-light p-5 rounded mt-3 border-dark"):
-            #     from seen_libritts import libritts_table
-            #     h3("Results for Seen Speakers in LibriTTS")
-            #     p(
-            #         "20 random speakers seen during training from the train-clean-100 split of LibriTTS.",
-            #         cls="lead"
-            #     )
-            #     libritts_table()
-
-            # with div(cls="border border-2 bg-light p-5 rounded mt-3 border-dark"):
-            #     from zeroshot import libritts_table
-            #     h3("Zeroshot Synthesis on LibriTTS test-clean")
-            #     p(
-            #         "All speakers are unseen from the test-clean split of LibriTTS.",
-            #         cls="lead"
-            #     )
-            #     libritts_table()
-
-            # with div(cls="border border-2 bg-light p-5 rounded mt-3 border-dark"):
-            #     from zeroshot import vctk_table
-            #     h3("Zeroshot Synthesis on VCTK")
-            #     p(
-            #         "All speakers are unseen from VCTK",
-            #         cls="lead"
-            #     )
-            #     vctk_table()
-
-            # with div(cls="border border-2 bg-light p-5 rounded mt-3 border-dark"):
-            #     from editing import editing
-            #     h3("Speech Editing")
-            #     editing()
-                
             with div(cls="border border-2 bg-light p-5 rounded mt-3 border-dark"):
                 from replacement import section_replace_compare
                 section_replace_compare()

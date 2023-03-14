@@ -1,7 +1,3 @@
-"""
-HTML generator for Section: Abstract.
-"""
-
 from dominate.tags import *
 from templates.audios import audio_table, audio_grid
 from dominate.util import raw
@@ -14,11 +10,6 @@ def section_abstract():
         """
         In recent years, text-to-speech (TTS) models have made great progress and received widespread applications. Recorded audio plays a critical role and is irreplaceable in our daily communication in spite of the high-fidelity speech produced by TTS models. It is of practical value to manipulate the recorded audio flexibly in many scenarios such as audio post-production. However, it is still challenging to "edit" the recording based on current TTS models given the diversity and variability lied in the realistic speech. In this paper, we extend the neural TTS model by incorporating the contextual spectrum and prosody features to construct a text-based speech editing system, which is named BEdit-TTS.  Our proposed model allows  deletion, insertion and replacement operations on the recording.  The objective and subjective evaluations on English and Chinese demonstrate the effectiveness of the proposed model and exhibit superior performance over several competitive baseline systems. 
         """,
-        # br(),
-        # br(),
-        # """The following are 6 different renditions of the abstract by a DiffVoice model. Note that this model does not have any speaker input.""",
-        # raw("""It samples <b>DIFF</b>erent <b>VOICE</b>s from the latent space."""),
-        # _class="lead"
     )
     h3("Baseline models")
     p(
@@ -37,7 +28,3 @@ def section_abstract():
         """),
         br(),
     )
-    # audio_grid(
-    #     audio_files=[f"/diffvoice-web/samples/abstract/{name}.wav" for name in ["f_0", "f_1", "f_2", "m_0", "m_1", "m_2"]],
-    #     width=3, control_width_px=300
-    # )
