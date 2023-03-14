@@ -59,7 +59,7 @@ def section_replace_compare():
         "Edited text: " + """My old remembrances went from me <u><em><strong>partly</strong></em></u> and all the ways of men so vain and melancholy.""",
         "11697_actressinhighlife_01_bowen_0002"
     ))
-    blocks.append(_gen_table("short", "eng",
+    blocks.append(_gen_table("short", "chn",
         "Original text: " + """星期六对吧。""",
         "Edited text: " + """星期<u><em><strong>一和星期二</strong></em></u>对吧。""",
         "SSB00180405"
