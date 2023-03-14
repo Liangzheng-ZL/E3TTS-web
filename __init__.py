@@ -30,9 +30,8 @@ if __name__ == "__main__":
 
             with div(cls="border border-2 bg-light p-5 rounded mt-3 border-danger"):
                 p(
-                    "If you are having problems with the audios playing, you can download all audio files on this page",
-                    " by downlading this ",
-                    a("github repository", href="https://anonymous.4open.science/r/bedit_web-9718"),
+                    "The code is available at",
+                    a("anonymized github repository", href="https://anonymous.4open.science/r/BEdit-TTS-B281/README.md"),
                     ". ", 
                     br(), br(),
                     "Some of the page's functionality requires javascript. Try to open with a different up-to-date browser. ",
