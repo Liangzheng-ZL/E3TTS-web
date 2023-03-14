@@ -12,7 +12,7 @@ def section_insert_compare():
     h3("Insertion")
     p(
         [
-            """Each sample has 4 audios, of which are synthesized audios from baseline and proposed systems. """,
+            """Each sample has 5 audios, of which are synthesized audios from baseline and proposed systems. """,
         ], _class="lead"
     )
     h4("Short")

@@ -7,7 +7,7 @@ from templates.spinspy import nav_spin
 def section_length_compare():
     h3("Insertion Length Robustness")
     p(
-        """In this section, we demonstrate BEdit-TTS's ability to conduct text-based speech editing (insertion) with different lengths of the inserted words.""",
+        """In this section, taking insertion for example, we demonstrate BEdit-TTS's ability to conduct text-based speech editing with different lengths of the edited words.""",
         cls="lead"
     )
     p(

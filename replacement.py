@@ -12,7 +12,7 @@ def section_replace_compare():
     h3("Replacement")
     p(
         [
-            """Each sample has 4 audios, of which are synthesized audios from baseline and proposed systems. """,
+            """Each sample has 5 audios, of which are synthesized audios from baseline and proposed systems. """,
         ], _class="lead"
     )
     blocks = []
