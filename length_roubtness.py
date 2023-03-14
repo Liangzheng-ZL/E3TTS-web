@@ -4,7 +4,7 @@ from templates.audios import audio_table, my_audio_table
 from templates.spinspy import nav_spin
 
 
-def section_replace_compare():
+def section_length_compare():
     h3("Insertion Length Robustness")
     h4("Middle")
     blocks = []
@@ -24,27 +24,30 @@ def section_replace_compare():
         )
 
     blocks.append(_gen_table("short", "eng",
-        "Original text: " + """Many others have already gone broke.""",
-        "Edited text: " + """<u><em><strong>Some</strong></em></u> others have already gone broke.""",
-        "6670_astounding_stories06_09_cummings_0058"
+        "Original text: " + """The pleasant season did my heart employ.""",
+        "Edited text: " + """The pleasant <u><em><strong>spring summer autumn and winter</strong></em></u> season did my heart employ.""",
+        "11697_actressinhighlife_01_bowen_0001"
     ))
     blocks.append(_gen_table("short", "eng",
-        "Original text: " + """And upon them were set sails patterned after the wonderful new invention of master fletcher of rye.
-""",
-        "Edited text: " + """And upon them were set sails patterned after the wonderful new invention of <u><em><strong>inventor</strong></em></u> fletcher of rye.
-""",
-        "6671_insearchofmademoiselle_02_gibbs_0019"
+        "Original text: " + """And nothing but the truth.""",
+        "Edited text: " + """And <u><em><strong>tell me and tell him</strong></em></u> nothing but the truth.""",
+        "12787_bigbluesoldier_01_hill_0003"
     ))
     blocks.append(_gen_table("short", "eng",
-        "Original text: " + """But I stood over him until he had done his work thoroughly.""",
-        "Edited text: " + """But I stood over him until he had done his <u><em><strong>book</strong></em></u> thoroughly.""",
-        "11614_barontrump_03_lockwood_0001"
+        "Original text: " + """What if my nephew Dick should be needing one.""",
+        "Edited text: " + """What if my nephew Dick <u><em><strong>comes back to his room</strong></em></u> should be needing one.""",
+        "12787_bigbluesoldier_01_hill_0018"
 
     ))
     blocks.append(_gen_table("short", "eng",
-        "Original text: " + """My old remembrances went from me wholly and all the ways of men so vain and melancholy.""",
-        "Edited text: " + """My old remembrances went from me <u><em><strong>partly</strong></em></u> and all the ways of men so vain and melancholy.""",
-        "11697_actressinhighlife_01_bowen_0002"
+        "Original text: " + """And most people had begun to use pink and blue wool on their needles.""",
+        "Edited text: " + """And most <u><em><strong>sensible and beautiful</strong></em></u> people had begun to use pink and blue wool on their needles.""",
+        "12787_bigbluesoldier_01_hill_0021"
+    ))
+    blocks.append(_gen_table("short", "eng",
+        "Original text: " + """Their children bullied.""",
+        "Edited text: " + """Their children <u><em><strong>more deeply into its philosophy</strong></em></u> bullied.""",
+        "12787_bigbluesoldier_01_hill_0042"
     ))
 
    
