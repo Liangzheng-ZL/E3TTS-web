@@ -28,7 +28,7 @@ def section_unseen_compare():
         )
     blocks.append(_gen_table("short", "eng",
         None,
-        "Text: " + """<u><em><strong>They were</strong></em></u>old friends.""",
+        "Text: " + """<u><em><strong>They were</strong></em></u> old friends.""",
         "237_134500_000021_000001"
     ))
 
